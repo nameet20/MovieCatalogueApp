@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchResultTableCell" rowHeight="150" id="8s4-xj-Jdu" customClass="SearchResultTableCell" customModule="MovieCatalogue" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8s4-xj-Jdu" id="weF-gr-HN5">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no_image" translatesAutoresizingMaskIntoConstraints="NO" id="8AI-BW-h2X">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iZ8-3v-JzT">
+                        <rect key="frame" x="160" y="5" width="228" height="140"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoO-TR-dEq">
+                                <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="81.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drG-Xg-5ot">
+                                <rect key="frame" x="0.0" y="86.333333333333329" width="34" height="53.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="iZ8-3v-JzT" secondAttribute="bottom" constant="5" id="GVE-ad-ceO"/>
+                    <constraint firstAttribute="trailing" secondItem="iZ8-3v-JzT" secondAttribute="trailing" constant="5" id="Itb-kb-41V"/>
+                    <constraint firstItem="8AI-BW-h2X" firstAttribute="width" secondItem="weF-gr-HN5" secondAttribute="height" multiplier="1:1" id="KtG-Pv-j0k"/>
+                    <constraint firstItem="8AI-BW-h2X" firstAttribute="top" secondItem="weF-gr-HN5" secondAttribute="top" id="ORA-IA-csd"/>
+                    <constraint firstItem="8AI-BW-h2X" firstAttribute="leading" secondItem="weF-gr-HN5" secondAttribute="leading" id="Pi1-bM-qh0"/>
+                    <constraint firstItem="iZ8-3v-JzT" firstAttribute="leading" secondItem="8AI-BW-h2X" secondAttribute="trailing" constant="10" id="jFb-qz-UDm"/>
+                    <constraint firstAttribute="bottom" secondItem="8AI-BW-h2X" secondAttribute="bottom" id="mVI-Ql-5nl"/>
+                    <constraint firstItem="iZ8-3v-JzT" firstAttribute="top" secondItem="weF-gr-HN5" secondAttribute="top" constant="5" id="uPl-Ru-7od"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="movieDescriptionLabel" destination="drG-Xg-5ot" id="Waz-gi-PXr"/>
+                <outlet property="movieThumbImageView" destination="8AI-BW-h2X" id="AYr-aF-bq5"/>
+                <outlet property="movieTitleLabel" destination="WoO-TR-dEq" id="jfl-11-uno"/>
+            </connections>
+            <point key="canvasLocation" x="17.557251908396946" y="-114.08450704225352"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="no_image" width="256" height="315"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
